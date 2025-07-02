@@ -1,4 +1,3 @@
-// backend/server.js
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -12,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 
 connectDB();
+
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 
 app.use("/api/food", foodRoutes);
 
