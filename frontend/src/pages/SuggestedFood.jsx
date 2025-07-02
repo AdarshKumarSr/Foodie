@@ -6,23 +6,32 @@ const SuggestedFood = () => {
 
   const getFood = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/food/random");
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_BASE_URL}/api/food/random`
+      );
       setFood(res.data);
     } catch (err) {
-      console.error(err);
+      console.error("Error fetching food:", err);
     }
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome! What do you want to eat today?</h1>
-      <button onClick={getFood} className="bg-green-500 text-white px-4 py-2 rounded">
+    <div className="p-4 min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <h1 className="text-3xl font-bold mb-6 text-center text-green-800">
+        Welcome! What do you want to eat today?
+      </h1>
+      <button
+        onClick={getFood}
+        className="bg-green-600 hover:bg-green-700 transition text-white px-6 py-3 rounded-lg shadow"
+      >
         Get Suggested Food
       </button>
       {food && (
-        <div className="mt-4 border p-4 rounded shadow">
-          <h2 className="text-xl font-semibold">{food.name}</h2>
-          <p><strong>Recipe:</strong> {food.recipe}</p>
+        <div className="mt-6 bg-white border p-6 rounded-lg shadow-lg w-full max-w-md">
+          <h2 className="text-2xl font-semibold mb-2 text-green-700">{food.name}</h2>
+          <p className="text-gray-700">
+            <strong>Recipe:</strong> {food.recipe}
+          </p>
         </div>
       )}
     </div>
