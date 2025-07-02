@@ -8,9 +8,11 @@ const SuggestedFood = () => {
     try {
        console.log("API Base URL:", process.env.REACT_APP_API_BASE_URL);
 
-      const res = await axios.get(
-       `${process.env.REACT_APP_API_BASE_UR}/api/food/random`
-      );
+      // const res = await axios.get(
+      //  `${process.env.REACT_APP_API_BASE_UR}/api/food/random`
+      // );
+      const res = await axios.get("https://foodie-eqy0.onrender.com/api/food/random");
+
 
       setFood(res.data);
     } catch (err) {
