@@ -6,9 +6,12 @@ const SuggestedFood = () => {
 
   const getFood = async () => {
     try {
+       console.log("API Base URL:", process.env.REACT_APP_API_BASE_URL);
+
       const res = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/food/random`
+       `${process.env.REACT_APP_API_BASE_UR}/api/food/random`
       );
+
       setFood(res.data);
     } catch (err) {
       console.error("Error fetching food:", err);
