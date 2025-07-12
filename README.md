@@ -1,13 +1,8 @@
-Thanks! Based on your update, here's the **final polished `README.md`** for your **Foodie** project with **MERN stack** and **MongoDB Atlas**:
-
----
-
-````markdown
 # 🍽️ Foodie — Random Food Suggestion App
 
 **Foodie** is a fun and lightweight MERN web app that helps you decide *what to eat* by suggesting random food items. Whether you're indecisive or just curious, Foodie serves up fresh ideas in a clean and minimal interface.
 
-🔗 **Live Demo:** [https://foodie-1-d2yw.onrender.com](https://foodie-1-d2yw.onrender.com)
+🔗 **Live Demo:** [https://foodie-1-d2yw.onrender.com]
 
 ---
 
@@ -97,16 +92,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-> 🍕 *“Life is uncertain. Eat first.”*
+*“Life is uncertain. Eat first. Eat healthy”*
 
-```
-
----
-
-Let me know if:
-- You want to add `.env.example` file
-- You want to include screenshots or demo GIFs
-- I should create a badge header (like GitHub repo stars, forks, etc.)
-
-Would you like help generating the MIT License file as well?
-```
